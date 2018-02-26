@@ -281,6 +281,6 @@
 
 
 Useful Links
-•	 http://davidshariff.com/blog/preparing-for-a-front-end-web-development-interview-in-2017/
-•	https://frontendmasters.com/books/front-end-handbook/2017/practice/making-fd.html
+â€¢	 http://davidshariff.com/blog/preparing-for-a-front-end-web-development-interview-in-2017/
+â€¢	https://frontendmasters.com/books/front-end-handbook/2017/practice/making-fd.html
 
