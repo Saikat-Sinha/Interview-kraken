@@ -49,11 +49,68 @@
 ### Angular
 1.	How to make one way binding in angular 1
 
+> `Solution:` In One-Way data binding, view (UI part) not updates automatically when data model changed and we need to write custom code to make it updated every time.
+
+
+**Example:**
+```
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>
+			AngularJs Two Binding Example
+		</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script type="text/javascript">
+			var app = angular.module('angularbindapp', []);
+			app.controller('angularbindingCtrl', function ($scope) {
+			$scope.name = 'Welcome to Tutlane.com';
+			});
+		</script>
+	</head>
+	<body ng-app="angularbindapp">
+		<div ng-controller="angularbindingCtrl">
+			<p>
+				Message:   {{ name }}
+			</p>
+		</div>
+	</body>
+</html>
+```
+
 ---
 2.	Difference between services and factory in angular
 
+> `Solution: ` - A service is a constructor(Object.create()) function whereas a factory is not, a factory function is really just a function that gets called, which is why we have to return an object explicitly. Services allow us to use ES6. Angular services are application singletons, this means that there is only one instance of a given service per injector.
+
+**Example:**
+```
+app.service('myService', function() {
+
+  // service is just a constructor function
+  // that will be called with 'new'
+
+  this.sayHello = function(name) {
+     return "Hi " + name + "!";
+  };
+});
+
+app.factory('myFactory', function() {
+
+  // factory returns an object
+  // you can run some code before
+
+  return {
+    sayHello : function(name) {
+      return "Hi " + name + "!";
+    }
+  }
+});
+```
+
 ---
-3.	How do you share data between controllers without using rootscope in angular 1.x? - service and app level constants
+3.	How do you share data between controllers without using rootscope in angular 1.x?
+> `Solution:` Services, Factories or app level constants
 
 ---
 4.	difference between component and directive, angular lifecycle, dirty checking and Digest cycle(Angularjs 1.x)
