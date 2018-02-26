@@ -77,7 +77,7 @@
 1. What is javascript typecasting? What is use strict in javascript?
 
 ---
-2.	Difference between '==' and '==='.
+2.	Difference between ' == ' and '==='.
 
 ---
 3.	Difference between undefined and not defined
@@ -86,7 +86,70 @@
 4. What is commonjs?
 
 ---
-5. Difference between callback approach and promise API
+#### 5. Difference between callback approach and promise API
+ 
+ >Promises and Callbacks are not fundamentally different promises are advisable when user wants to perform series of tasks
+
+> callback is a function which is called on the completion of the given task.This prevents any blocking, and allows other code to be run in meantime 
+ 
+ >**Example:callback**
+ ```javascript
+ function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+ ```
+ > promise provides us with more cleaner and robust way to handle async code.And also handles errors in an easy way.
+>a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function
+ >**Example:promise**
+
+ ```javascript
+
+  function successCallback(result) {
+  console.log("It succeeded with " + result);
+}
+
+function failureCallback(error) {
+  console.log("It failed with " + error);
+}
+
+doSomething(successCallback, failureCallback);
+
+
+let promise = doSomething(); 
+promise.then(successCallback, failureCallback);
+ ```
+**why to use promise over callback examples**
+
+>:rage:callback
+
+```javascript
+doSomething(function(result) {
+  doSomethingElse(result, function(newResult) {
+    doThirdThing(newResult, function(finalResult) {
+      console.log('Got the final result: ' + finalResult);
+    }, failureCallback);
+  }, failureCallback);
+}, failureCallback);
+```
+>:innocent: promise
+```javascript
+doSomething()
+.then(result => doSomethingElse(result))
+.then(newResult => doThirdThing(newResult))
+.then(finalResult => {
+  console.log(`Got the final result: ${finalResult}`);
+})
+.catch(failureCallback);
+```
+
+>:mag:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
 
 ---
 6.	Difference between bind ,call, apply function.
@@ -122,8 +185,39 @@
 
 
 ---
-16.	Ways of creating objects in JS
+#### 16.	Ways of creating objects in JS
 
+**Using ES6 class syntax:**
+```javascript
+class myObject  {
+  constructor(name) {
+    this.name = name;
+  }
+}
+var e = new myObject("hello");
+```
+**Using the Object() constructor:**
+```javascript
+var a = new Object();
+```
+**Using Object.create() method:**
+>This method creates a new object extending the prototype object passed as a parameter.
+```javascript
+var a = Object.create(null);
+```
+**Using the bracket's syntactig sugar:**
+>This is equivalent to Object.create(null) method, using a null prototype as an argument.
+```javascript
+var b = {};
+```
+
+**Using the function constructor + prototype:**
+```javascript
+function myObj(){};
+myObj.prototype.name = "hello";
+var k = new myObj()
+```
+:mag:[reference](https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript)
 
 ---
 17.	Async/Await related questions
@@ -134,7 +228,17 @@
 
 
 ---
-19.	Difference between document.ready and window.load
+#### 19.	Difference between document.ready and window.load
+
+**window.onload**
+>The load event on the window object triggers when the whole page is loaded including styles, images and other resources.
+
+**readyState**
+>The document.readyState property gives us information about it. There are 3 possible values:
+*loading* – the document is loading.
+*interactive* – the document was fully read.
+*complete* – the document was fully read and all resources (like images) are loaded too.
+
 
 
 ---
@@ -146,16 +250,84 @@
 
 
 ---
-22.	Slice vs Splice
+#### 22.	Slice vs Splice
+<table>
+  <thead>
+    <tr>
+      <th>splice()</th>
+      <th>slice()</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>splice  method returns the removed item(s) in an array </td>
+      <td>method returns the selected element(s) in an array, as a new array object</td>     
+    </tr>
+    <tr>
+      <td>changes orignial array/Issues</td>
+      <td>original array is untouched</td>
+        </tr>
+        <tr>
+      <td>takes <strong>n</strong> number of arguments (start,deleteCount,items) start is manditory</td>
+      <td>takes <strong>2</strong> arguments (begin,end) both are optional parameters</td>     
+    </tr>    
+     </tbody>
+</table>
+
+>**Example:splice()**
+```javascript
+var array=[1,2,3,4,5];
+console.log(array.splice(2));
+//  [3, 4, 5], returned removed item(s) as a new array object.
+ 
+console.log(array);
+//  [1, 2], original array altered.
+ 
+var array2=[6,7,8,9,0];
+console.log(array2.splice(2,1));
+//  [8]
+ 
+console.log(array2.splice(2,0));
+//[] , as no item(s) removed.
+ 
+console.log(array2);
+// [6,7,9,0]
+ 
+var array3=[11,12,13,14,15];
+console.log(array3.splice(2,1,"Hello","World"));
+// [13]
+ 
+console.log(array3);
+//  [11, 12, "Hello", "World", 14, 15]
+```
+
+>**Example:slice()**
+```javascript
+var array=[1,2,3,4,5]
+console.log(array.slice(2));
+//  [3, 4, 5], returned selected element(s).
+ 
+console.log(array.slice(-2));
+//  [4, 5], returned selected element(s).
+console.log(array);
+//  [1, 2, 3, 4, 5], original array remains intact.
+ 
+var array2=[6,7,8,9,0];
+console.log(array2.slice(2,4));
+//  [8, 9]
+```
+>:mag:[Reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
+
 
 
 ---
 23. about using ES6 sets over arrays
 
 ---
-24.	Write an emitter class? solution (https://www.glassdoor.co.in/Interview/Write-an-emitter-class-emitter-new-Emitter-1-Support-subscribing-to-events-sub-emitter-subscribe-eve-QTN_1793084.htm)
+#### 24.	Write an emitter class? 
+>:mag:[Solution](https://www.glassdoor.co.in/Interview/Write-an-emitter-class-emitter-new-Emitter-1-Support-subscribing-to-events-sub-emitter-subscribe-eve-QTN_1793084.htm)
 
----
+  ---
 25.	Multiple API requests
 
 ---
@@ -170,7 +342,7 @@
 
 ---
 
-## APIS
+## API
 
 1. Indexed DB
 
