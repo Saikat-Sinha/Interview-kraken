@@ -36,6 +36,77 @@
 
 
 ## JavaScript
+Slice vs Splice
+<table>
+  <thead>
+    <tr>
+      <th>splice()</th>
+      <th>slice()</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>splice  method returns the removed item(s) in an array </td>
+      <td>method returns the selected element(s) in an array, as a new array object</td>     
+    </tr>
+    <tr>
+      <td>changes orignial array/Issues</td>
+      <td>original array is untouched</td>
+        </tr>
+        <tr>
+      <td>takes <strong>n</strong> number of arguments (start,deleteCount,items) start is manditory</td>
+      <td>takes <strong>2</strong> arguments (begin,end) both are optional parameters</td>     
+    </tr>    
+     </tbody>
+</table>
+
+>**Example:splice()**
+```javascript
+var array=[1,2,3,4,5];
+console.log(array.splice(2));
+//  [3, 4, 5], returned removed item(s) as a new array object.
+ 
+console.log(array);
+//  [1, 2], original array altered.
+ 
+var array2=[6,7,8,9,0];
+console.log(array2.splice(2,1));
+//  [8]
+ 
+console.log(array2.splice(2,0));
+//[] , as no item(s) removed.
+ 
+console.log(array2);
+// [6,7,9,0]
+ 
+var array3=[11,12,13,14,15];
+console.log(array3.splice(2,1,"Hello","World"));
+// [13]
+ 
+console.log(array3);
+//  [11, 12, "Hello", "World", 14, 15]
+```
+
+>**Example:slice()**
+```javascript
+var array=[1,2,3,4,5]
+console.log(array.slice(2));
+//  [3, 4, 5], returned selected element(s).
+ 
+console.log(array.slice(-2));
+//  [4, 5], returned selected element(s).
+console.log(array);
+//  [1, 2, 3, 4, 5], original array remains intact.
+ 
+var array2=[6,7,8,9,0];
+console.log(array2.slice(2,4));
+//  [8, 9]
+```
+>:mag:[Reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
+
+
+
+---
 
 
 ## DOM
