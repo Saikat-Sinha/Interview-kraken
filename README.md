@@ -144,19 +144,26 @@ var k = new myObj()
 :mag:[reference](https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript)
 
 ---
-Async/Await related
+ what is Async/Await?
 
 - async/await makes our job easier when working with promises
-- we define a async function by using *async*
+- we define a async function by using *async* keyword
 - when an async function is called it returns a Promise.If we dont return a promise  it will create a promise and return value is wrapped in a promise
 - await keyword pauses and waits for the passed promise to get resolved
-- why it is better 
-  - it is clean to write and easy to handle errors
-  - further reference :point_right::mag:[reference](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
 
+why async/await is better than prmoise? 
+  - it is clean to write
+      - easy to handle errors
+      - easy to debug(error stack in async await points to the function which contains error exactly)
+      - further reference :point_right::mag:[reference](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
+      
 :point_right:[performance difference between promise and async await](https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/)   
-
+![image](https://imgur.com/LklaBEt)
 >:point_right::mag:[reference](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
+
+
+:point_right::mag:[Async/await polyfill](https://github.com/touskar/async-await-es7/blob/master/index.js)
+
 ---
 
  Difference between callback approach and promise API
