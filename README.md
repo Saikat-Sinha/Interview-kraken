@@ -108,7 +108,123 @@ console.log(array2.slice(2,4));
 
 ---
 
+Ways of creating objects in JS
 
+
+**Using ES6 class syntax:**
+```javascript
+class myObject  {
+  constructor(name) {
+    this.name = name;
+  }
+}
+var e = new myObject("hello");
+```
+**Using the Object() constructor:**
+```javascript
+var a = new Object();
+```
+**Using Object.create() method:**
+>This method creates a new object extending the prototype object passed as a parameter.
+```javascript
+var a = Object.create(null);
+```
+**Using the bracket's syntactig sugar:**
+>This is equivalent to Object.create(null) method, using a null prototype as an argument.
+```javascript
+var b = {};
+```
+
+**Using the function constructor + prototype:**
+```javascript
+function myObj(){};
+myObj.prototype.name = "hello";
+var k = new myObj()
+```
+:mag:[reference](https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript)
+
+---
+Async/Await related
+
+- async/await makes our job easier when working with promises
+- we define a async function by using *async*
+- when an async function is called it returns a Promise.If we dont return a promise  it will create a promise and return value is wrapped in a promise
+- await keyword pauses and waits for the passed promise to get resolved
+- why it is better 
+  - it is clean to write and easy to handle errors
+  - further reference :point_right::mag:[reference](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
+
+:point_right:[performance difference between promise and async await](https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/)   
+
+>:point_right::mag:[reference](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
+---
+
+5. Difference between callback approach and promise API
+ 
+| callback        | promise           |
+| ------------- |:-------------:|
+| callback is a function which is called on the completion of the given task.This prevents any blocking, and allows other code to be run in meantime     | A promise is an object that may produce a single value some time in the future: A promise may be in one of 3 possible states: fulfilled, rejected, or pending.|
+|Callbacks are just the name of a convention for using JavaScript functions. There isn't a special thing called a 'callback' in the JavaScript language, it's just a convention. Instead of immediately returning some result like most functions, functions that use callbacks take some time to produce a result|promise provides us with more cleaner and robust way to handle async code.And also handles errors in an easy way.a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function|
+|In callbacks we need to handle success and failure|promise by default handles success and failure|
+ >**Example:callback**
+ ```javascript
+ function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name.');
+  callback(name);
+}
+
+processUserInput(greeting);
+ ```
+
+ >**Example:promise**
+
+ ```javascript
+
+  function successCallback(result) {
+  console.log("It succeeded with " + result);
+}
+
+function failureCallback(error) {
+  console.log("It failed with " + error);
+}
+
+doSomething(successCallback, failureCallback);
+
+
+let promise = doSomething(); 
+promise.then(successCallback, failureCallback);
+ ```
+**why to use promise over callback examples**
+
+>:rage:callback hell
+
+```javascript
+doSomething(function(result) {
+  doSomethingElse(result, function(newResult) {
+    doThirdThing(newResult, function(finalResult) {
+      console.log('Got the final result: ' + finalResult);
+    }, failureCallback);
+  }, failureCallback);
+}, failureCallback);
+```
+>:innocent: promise
+```javascript
+doSomething()
+.then(result => doSomethingElse(result))
+.then(newResult => doThirdThing(newResult))
+.then(finalResult => {
+  console.log(`Got the final result: ${finalResult}`);
+})
+.catch(failureCallback);
+```
+
+>:mag:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+>:point_right::mag:[reference for performance difference between callback and promise](https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/)
+---
 ## DOM
 
 
