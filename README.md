@@ -159,13 +159,13 @@ Async/Await related
 >:point_right::mag:[reference](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
 ---
 
-5. Difference between callback approach and promise API
+ Difference between callback approach and promise API
  
 | callback        | promise           |
 | ------------- |:-------------:|
 | callback is a function which is called on the completion of the given task.This prevents any blocking, and allows other code to be run in meantime     | A promise is an object that may produce a single value some time in the future: A promise may be in one of 3 possible states: fulfilled, rejected, or pending.|
 |Callbacks are just the name of a convention for using JavaScript functions. There isn't a special thing called a 'callback' in the JavaScript language, it's just a convention. Instead of immediately returning some result like most functions, functions that use callbacks take some time to produce a result|promise provides us with more cleaner and robust way to handle async code.And also handles errors in an easy way.a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function|
-|In callbacks we need to handle success and failure|promise by default handles success and failure|
+
  >**Example:callback**
  ```javascript
  function greeting(name) {
