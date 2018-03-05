@@ -36,6 +36,21 @@
 
 
 ## JavaScript
+
+Difference between document.ready() and window.onload()
+
+**window.onload**
+>The load event on the window object triggers when the whole page is loaded including styles, images and other resources.
+
+
+**readyState**
+>The document.readyState property gives us information  3 possible values:
+*loading* – the document is loading.
+*interactive* – the document was fully read.(like HTML content is loaded and other content is yet to load )
+*complete* – the document was fully read and all resources (like images,scripts,stylesheets etc) are loaded .
+
+
+---
 Slice vs Splice
 <table>
   <thead>
