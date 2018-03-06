@@ -370,16 +370,27 @@ app.factory('myFactory', function() {
 
 1. what happens when you type in a URL in browser ?
 > `Solution: `
+
 I. browser checks cache; if requested object is in cache or is fresh, if cached skip to `step IX`
+
 II. browser asks OS for server's IP address
+
 III. OS makes a DNS lookup and replies the IP address to the browser
+
 IV. browser opens a TCP connection to server (this step is much more complex with HTTPS)
+
 V. browser sends the HTTP request through TCP connection
+
 VI. browser receives HTTP response and may close the TCP connection, or reuse it for another request
+
 VII. browser checks if the response is a redirect or a conditional response (3xx result status codes), authorization request (401), error (4xx and 5xx), etc.; these are handled differently from normal responses (2xx)
+
 VIII. if cacheable, response is stored in cache
+
 IX. browser decodes response (e.g. if it's gzipped)
+
 X. browser determines what to do with response (e.g. is it a HTML page, is it an image, is it a sound clip?)
+
 XI. browser renders response, or offers a download dialog for unrecognized types
 
 More simplified diagram:
