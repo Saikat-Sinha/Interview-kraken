@@ -127,7 +127,15 @@ console.log(array2.slice(2,4));
 
 
 ---
-what is bind()
+
+what is bind()?
+
+  - The simplest use of bind() is to make a function that, no matter how it is called, it will be called with a particular *this* value
+  - bind() method always creates new function.this keyword is set to the provided value  
+ :point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+---
+what is call() and apply()?
+
 
 ---
 
