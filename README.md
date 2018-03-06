@@ -126,7 +126,22 @@ console.log(array2.slice(2,4));
 
 
 
+---
 
+what this keyword does in JavaScript?
+
+- In most of the cases this is determined by how the function is called
+- It may be different each time function is called
+- Out side the function this referes to the global object
+- It behaves differently in strict mode and normal mode
+- In strict mode, if this was not defined by the execution context, it remains undefined
+- Arrow functions does not provdide there own this binding
+- When a function is used as a constructor (with the new keyword), its this is bound to the new object being constructed
+
+ :point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+
+
+---
 
 what is bind()?
 
