@@ -122,20 +122,26 @@ var array2=[6,7,8,9,0];
 console.log(array2.slice(2,4));
 //  [8, 9]
 ```
->:mag:[Reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
+>:mag:[reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
 
 
 
----
+
 
 what is bind()?
 
   - The simplest use of bind() is to make a function that, no matter how it is called, it will be called with a particular *this* value
   - bind() method always creates new function.this keyword is set to the provided value  
+   
  :point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
+
 ---
 what is call() and apply()?
 
+- call and apply  are similar to bind() where as in bind it will return a new function but in call and apply it calls a function with the given this value and argument
+- The only difference between call and apply is call() accepts an argument list, while apply() accepts a single array of arguments.
+ 
+:point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
 ---
 
