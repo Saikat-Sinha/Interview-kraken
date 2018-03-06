@@ -42,7 +42,7 @@ Difference between Cookies, LocalStorage and Session storage
 
 :mag: [https://www.youtube.com/watch?v=AwicscsvGLg](https://www.youtube.com/watch?v=AwicscsvGLg)
 
-Difference between document.ready() and window.onload()
+Difference between document.readyState() and window.onload()
 
 **window.onload**
 >The load event on the window object triggers when the whole page is loaded including styles, images and other resources.
@@ -125,6 +125,9 @@ console.log(array2.slice(2,4));
 >:mag:[Reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
 
 
+
+---
+what is bind()
 
 ---
 
