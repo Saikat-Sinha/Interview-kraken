@@ -400,6 +400,7 @@ More simplified diagram:
 2. How browser rendering works?
 > `Solution: `
 ![image](https://imgur.com/8trAk0z.png)
+
 > **DOM Tree** - The browser starts by constructing the DOM tree (a tree of nodes corresponding to HTML elements).
 
 > **CSSOM Tree** - Next the browser constructs the CSSOM tree (a tree of nodes corresponding to CSS selectors).
