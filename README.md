@@ -150,12 +150,27 @@ what is bind()?
    
  :point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
+ ```javascript
+var greet=function(name){
+  console.log(this.toUpperCase()+ ' ' +name);
+}
+  var bindExample=greet.call('hello','sample');
+  bindExample();////HELLO sample
+```
+
 ---
 what is call() and apply()?
 
 - call and apply  are similar to bind() where as in bind it will return a new function but in call and apply it calls a function with the given this value and argument
 - The only difference between call and apply is call() accepts an argument list, while apply() accepts a single array of arguments.
- 
+
+```javascript
+var greet=function(name){
+  console.log(this.toUpperCase()+ ' ' +name);
+}
+  greet.call('hello','sample');//HELLO sample
+```
+
 :point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
 
 ---
