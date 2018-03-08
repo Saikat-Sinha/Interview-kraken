@@ -34,6 +34,42 @@
 
 ## CSS
 
+Box model and Box sizing
+
+Box model
+
+- Content - The content of the box, where text and images appear
+- Padding - Clears an area around the content. The padding is transparent
+- Border - A border that goes around the padding and content
+- Margin - Clears an area outside the border. The margin is transparent
+ 
+![image](https://i.imgur.com/j14R0Xp.jpg)
+
+Box sizing
+
+ - **content-box :**
+ >example:
+  ```
+ div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0; 
+}
+calculations
+320px (width)
++ 20px (left + right padding)
++ 10px (left + right border)
++ 0px (left + right margin)
+= 350px-> so the final width will be equal to 350px when using content-box which is default   
+ ``` 
+**border-box :**
+- for the above example the final width will be equal to 320px width when boxsizing:border-box is used
+- when using border-box content size will be increased/decreased based on the border and padding value
+ 
+:point_right::mag_right:[reference](https://www.w3schools.com/css/css_boxmodel.asp)
+
+---
 
 ## JavaScript
 
