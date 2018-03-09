@@ -47,7 +47,7 @@ Box model
 
 Box sizing
 
- - **content-box :**
+**content-box :**
  >example:
   ```
  div {
@@ -158,7 +158,7 @@ var array2=[6,7,8,9,0];
 console.log(array2.slice(2,4));
 //  [8, 9]
 ```
->:mag:[reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
+:point_right::mag:[reference](http://www.tothenew.com/blog/javascript-splice-vs-slice/)
 
 
 
@@ -243,7 +243,7 @@ function myObj(){};
 myObj.prototype.name = "hello";
 var k = new myObj()
 ```
-:mag:[reference](https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript)
+:point_right::mag_right:[reference](https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript)
 
 ---
  what is Async/Await?
@@ -257,12 +257,12 @@ why async/await is better than prmoise?
   - it is clean to write
       - easy to handle errors
       - easy to debug(error stack in async await points to the function which contains error exactly)
-      - further reference :point_right::mag:[reference](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
+      - further reference :point_right::mag_right:[reference](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9)
 
-:point_right:[performance difference between promise and async await](https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/)
+:point_right::mag_right:[performance difference between promise and async await](https://kyrylkov.com/2017/04/25/native-promises-async-functions-nodejs-8-performance/)
 
 ![image](https://i.imgur.com/LklaBEt.jpg)
->:point_right::mag:[reference](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
+:point_right::mag_right:[reference](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
 
 
 :point_right::mag:[Async/await polyfill](https://github.com/touskar/async-await-es7/blob/master/index.js)
