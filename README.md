@@ -34,6 +34,21 @@
 
 ## CSS
 
+block vs Inline-block vs Inline
+  
+  **block**
+block elements always starts on a new line,and fills up the horizontal space left and right on the web page. You can add margins and padding on all four sides of any block element — top, right, left, and bottom.
+
+**Inline**
+Inline elements don’t start on a new line  
+When it comes to margins and padding, browsers treat inline elements differently. You can add space to the left and right on an inline element, but you cannot add height to the top or bottom padding or margin of an inline element.
+
+**Inline-block**
+Inline-block elements are similar to inline elements, except they can have padding and margins added on all four sides
+
+:point_right::mag_right:[reference](https://medium.com/@DaphneWatson/css-display-properties-block-inline-and-inline-block-how-to-tell-the-difference-7d3a1e6e3051)
+
+---
 Box model and Box sizing
 
 Box model
