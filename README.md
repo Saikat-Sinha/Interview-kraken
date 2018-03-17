@@ -33,7 +33,21 @@
 ---
 
 ## CSS
+css specificity
 
+css maeked with !important will have highest priority
+inline styles will always have high priority than external style sheets
+
+specificity
+  - Inline
+  - IDs
+  - classs,pseudo-classes,attribute
+  - Elements,psuedo-elements
+  
+  ![image](http://www.standardista.com/wp-content/uploads/2012/01/specificityimg.png)
+
+
+---
 block vs Inline-block vs Inline
   
   **block**
