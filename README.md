@@ -29,6 +29,19 @@
 
 > this also works with new line
 
+---
+
+Difference Between ID and Class
+
+ID
+- id is **unique**
+- each element can have only **one** id 
+- each page can have only one element with that id
+
+class
+- classes are **not unique**
+- we can use same class for **multiple** elements
+- we can use multiple classes for same element
 
 ---
 
