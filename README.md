@@ -53,7 +53,7 @@ rem
 - rem is relative to a base font-size
 - in general the base font is 16px and if we want 32px( 32 / 16) = 2 which is 2 rem
 - if we change root font size then the calculations vary according to root font size
-- when rem is used we change the website  font size by changing base font size
+- when rem is used, we can change the website font size by changing base font size
 
 em 
  - em is relative to the font-size of its direct or nearest parent
