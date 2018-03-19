@@ -52,12 +52,12 @@ Difference between rem and em
 rem
 - rem is relative to a base font-size
 - in general the base font is 16px and if we want 32px( 32 / 16) = 2 which is 2 rem
-- if we change root font size then the calculations vary according to root font size
-- when rem is used, we can change the website font size by changing base font size
+- if we change root font size then the calculations vary according to root font-size
+- when rem is used, we can change the website font-size by changing base font-size
 
 em 
  - em is relative to the font-size of its direct or nearest parent
- - calculations are simplar to rem the only change is base font is size of parent font-size
+ - calculations are similar to rem the only change is base font-size is size of parent font-size
  - em gives the ability to control an area of a design   
 
 
