@@ -318,6 +318,32 @@ var k = new myObj()
 :point_right::mag_right:[reference](https://coderwall.com/p/p5cf5w/different-ways-of-creating-an-object-in-javascript)
 
 ---
+
+Different ways to create immutable Object 
+
+```javascript
+var test={name:"joe"}
+Object.defineProperty(test,'name',{writable:false})
+test.name="new name"// now if we try to change it in strict mode it will trow and error but if name it self is an object we can change the value of that object example
+var test={name:{testOne:"can we change this"}}
+Object.defineProperty(test,'name',{writable:false})
+test.name.testTwo="Yes i can change this value :)"
+In ES 6 we can use const which will behave same 
+//then how to make them immutable here comes the saviour
+Object.freeze(test.name)
+
+in ES 6 we can use const which will behave same 
+
+
+
+
+
+
+
+
+
+
+---
  what is Async/Await?
 
 - async/await makes our job easier when working with promises
