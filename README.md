@@ -335,7 +335,13 @@ Object.freeze(test.name)
 in ES 6 we can use const which will behave same 
 
 ```
-
+writable
+ - If writable is false we cannot change the value of the Object as written above
+enumerable 
+ - If enumerable is false we cannot enumerate the Object 
+ - This will also effect the JSON.stringify() it will not show up here also
+configurable
+ - If configurable is false then we cannot change the properties one it is set to false it cannot be set to true
 
 
 
