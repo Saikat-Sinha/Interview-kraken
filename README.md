@@ -35,7 +35,7 @@ Difference Between ID and Class
 
 ID
 - id is **unique**
-- each element can have only **one** id 
+- each element can have only **one** id
 - each page can have only one element with that id
 
 class
@@ -55,10 +55,10 @@ rem
 - if we change root font size then the calculations vary according to root font-size
 - when rem is used, we can change the website font-size by changing base font-size
 
-em 
+em
  - em is relative to the font-size of its direct or nearest parent
  - calculations are similar to rem the only change is base font-size is size of parent font-size
- - em gives the ability to control an area of a design   
+ - em gives the ability to control an area of a design
 
 
 ---
@@ -73,18 +73,18 @@ specificity
   - IDs
   - classs,pseudo-classes,attribute
   - Elements,psuedo-elements
-  
+
   ![image](http://www.standardista.com/wp-content/uploads/2012/01/specificityimg.png)
 
 
 ---
 block vs Inline-block vs Inline
-  
+
   **block**
 block elements always starts on a new line,and fills up the horizontal space left and right on the web page. You can add margins and padding on all four sides of any block element — top, right, left, and bottom.
 
 **Inline**
-Inline elements don’t start on a new line  
+Inline elements don’t start on a new line
 When it comes to margins and padding, browsers treat inline elements differently. You can add space to the left and right on an inline element, but you cannot add height to the top or bottom padding or margin of an inline element.
 
 **Inline-block**
@@ -101,7 +101,7 @@ Box model
 - Padding - Clears an area around the content. The padding is transparent
 - Border - A border that goes around the padding and content
 - Margin - Clears an area outside the border. The margin is transparent
- 
+
 ![image](https://i.imgur.com/j14R0Xp.jpg)
 
 Box sizing
@@ -113,19 +113,19 @@ Box sizing
     width: 320px;
     padding: 10px;
     border: 5px solid gray;
-    margin: 0; 
+    margin: 0;
 }
 calculations
 320px (width)
 + 20px (left + right padding)
 + 10px (left + right border)
 + 0px (left + right margin)
-= 350px-> so the final width will be equal to 350px when using content-box which is default   
- ``` 
+= 350px-> so the final width will be equal to 350px when using content-box which is default
+ ```
 **border-box :**
 - for the above example the final width will be equal to 320px width when boxsizing:border-box is used
 - when using border-box content size will be increased/decreased based on the border and padding value
- 
+
 :point_right::mag_right:[reference](https://www.w3schools.com/css/css_boxmodel.asp)
 
 ---
@@ -241,8 +241,8 @@ what this keyword does in JavaScript?
 what is bind()?
 
   - The simplest use of bind() is to make a function that, no matter how it is called, it will be called with a particular *this* value
-  - bind() method always creates new function.this keyword is set to the provided value  
-   
+  - bind() method always creates new function.this keyword is set to the provided value
+
  :point_right::mag_right:[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)
 
  ```javascript
@@ -289,6 +289,17 @@ var a = new Object();
 >This method creates a new object extending the prototype object passed as a parameter.
 ```javascript
 var a = Object.create(null);
+```
+
+```javascript
+var a=Object.create(Object.prototype,{name:{
+  value:"mak",
+  enumerable:true,
+  writable:true,
+  configurable:true
+  // with the new syntax sugar javascript will create thses values internally
+}})
+
 ```
 **Using the bracket's syntactig sugar:**
 >This is equivalent to Object.create(null) method, using a null prototype as an argument.
