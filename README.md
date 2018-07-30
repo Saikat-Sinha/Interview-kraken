@@ -297,9 +297,11 @@ var a=Object.create(Object.prototype,{name:{
   enumerable:true,
   writable:true,
   configurable:true
-  // with the new syntax sugar javascript will create thses values internally
+  // with the new syntax sugar javascript will create these values internally
 }})
-
+//example:
+var test={name:"joe"}
+Object.getOwnPropertyDescriptor(test,'name')// results in {value: "joe", writable: true, enumerable: true, configurable: true}
 ```
 **Using the bracket's syntactig sugar:**
 >This is equivalent to Object.create(null) method, using a null prototype as an argument.
